@@ -7,5 +7,10 @@ import { faker } from '@faker-js/faker';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'typing';
+  randomText = faker.lorem.sentence({ min: 3, max: 5 });
+
+  onInputChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    console.log(target.value);
+  }
 }
