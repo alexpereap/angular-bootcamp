@@ -2,7 +2,11 @@
   <div class="columns is-centered">
     <div class="box column is-one-third">
       <h1 class="title has-text-centered" >Typing challenge</h1>
-      <p class="has-text-centered" >{{ randomText }}</p>
+      <p class="has-text-centered" >
+        <span *ngFor="let txtObj of randomTextObj" >
+          <span class="{{ txtObj.class }}" >{{ txtObj.letter }}</span>
+        </span>
+      </p>
       <div class="field">
         <input (input)="onInputChange($event)" type="text" class="input" >
       </div>
