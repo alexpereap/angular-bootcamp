@@ -24,4 +24,16 @@
       </div>
     </div>
   </div>
+  <div class="row" >
+    <div class="form-group col">
+      <label for="">Payment Amount</label>
+      <input class="form-control" type="number" (input)="onAmountChange($event)" >
+    </div>
+    <div class="col">
+      <label for=""><b>Payment Amount</b></label>
+      <div>
+        {{ amount | currency: 'COP' }}
+      </div>
+    </div>
+  </div>
 </div>
