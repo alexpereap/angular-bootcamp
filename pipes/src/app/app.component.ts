@@ -16,7 +16,7 @@ export class AppComponent {
 
   onDateChange(event: Event) {
     const target = event.target as HTMLInputElement;
-    
+    this.date = target.value;
   }
   
 }
