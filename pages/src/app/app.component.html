@@ -4,19 +4,19 @@
       class="page-item"
       [ngClass]="{ disabled: currentPage === 0 }"
     >
-      <a href="" class="page-link">Prev</a>
+      <a href="javascript:void(0)" class="page-link" (click)="currentPage = currentPage - 1" >Prev</a>
     </li>
     <li class="page-item"
         [ngClass]="{ active: i === currentPage}"
         *ngFor="let image of images; let i = index;" 
     >
-      <a href="" class="page-link">{{ i + 1 }}</a>
+      <a href="javascript:void(0)" (click)="currentPage = i" class="page-link">{{ i + 1 }}</a>
     </li>
     <li 
       class="page-item"
       [ngClass]="{ disabled: currentPage === images.length - 1}"
     >
-      <a href="" class="page-link">Next</a>
+      <a href="javascript:void(0)" class="page-link" (click)="currentPage = currentPage + 1" >Next</a>
     </li>
   </ul>
 </nav>
