@@ -142,7 +142,6 @@ export class AppComponent {
     if (this.currentPage >= 3) {
       return Math.abs(this.currentPage - index) < 3;
     } else if (index >= this.images.length - 5) {
-      console.log(index);
       return Math.abs(this.currentPage - index) < 5;
     }
     
