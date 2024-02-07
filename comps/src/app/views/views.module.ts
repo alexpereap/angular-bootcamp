@@ -5,12 +5,14 @@ import { SharedModule } from '../shared/shared.module';
 import { ViewsRoutingModule } from './views-routing.module';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { ViewsHomeComponent } from './views-home/views-home.component';
+import { ItemListComponent } from './item-list/item-list.component';
 
 
 @NgModule({
   declarations: [
     StatisticsComponent,
-    ViewsHomeComponent
+    ViewsHomeComponent,
+    ItemListComponent
   ],
   imports: [
     CommonModule,
