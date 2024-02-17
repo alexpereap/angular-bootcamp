@@ -36,3 +36,14 @@ class Car {
 const myCar = new Car('red', 2000);
 myCar.drive();
 console.log(myCar.color, myCar.year);
+
+// decorator
+
+const Component = (target: any) => {
+    console.log(target);
+}
+
+@Component
+class DCar {
+
+}
