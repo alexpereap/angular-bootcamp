@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent {
+  term = '';
 
+  onInput(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.term = target.value;
+  }
 }
