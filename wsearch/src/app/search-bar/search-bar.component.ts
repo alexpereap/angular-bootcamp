@@ -12,4 +12,9 @@ export class SearchBarComponent {
     const target = event.target as HTMLInputElement;
     this.term = target.value;
   }
+
+  onFormSubmit(event: Event) {
+    event.preventDefault();
+    console.log(this.term)
+  }
 }
