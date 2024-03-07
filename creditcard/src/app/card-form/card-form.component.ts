@@ -13,4 +13,8 @@ export class CardFormComponent {
       Validators.minLength(3)
     ])
   })
+
+  public getControl(field: string) {
+    return this.cardForm.get(field) as FormControl;
+  }
 }
