@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-equation',
@@ -11,7 +11,16 @@ export class EquationComponent {
     a: new FormControl(this.randonNumber()),
     b: new FormControl(this.randonNumber()),
     answer: new FormControl('')
-  })
+  }, [
+      (form: AbstractControl) => {
+        const { a, b, answer } = form.value;
+        if (a + b === parseInt(answer)) {
+          return null;
+        }
+
+        return { addition: true } // eror about custom error "addition"
+    }
+  ])
 
   get a() {
     return this.mathForm.value.a
