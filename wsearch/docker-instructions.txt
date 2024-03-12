@@ -1,2 +1,5 @@
 docker build -t wsearch .
 docker run -p 8080:80 wsearch => add -d for detached mode
+
+docker ps -a #list docker
+docker docker rm --force <container_name> #removes container by name
