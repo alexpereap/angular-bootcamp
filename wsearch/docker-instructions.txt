@@ -1,0 +1,2 @@
+docker build -t wsearch .
+docker run -p 8080:80 wsearch => add -d for detached mode
